@@ -57,6 +57,12 @@ a p:hover {
     flex: 0 1 33.333%;
 }
 
+.cart img {
+    position: relative;
+    top: 5px;
+    max-width: 20px;
+}
+
 .cart-counter {
     background-color: black;
     color: aliceblue;
