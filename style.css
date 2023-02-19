@@ -230,8 +230,8 @@ a p:hover {
 
 .slider img {
     padding: 0px;
-    width: 104px;
-    height: 104px;
+    max-width: 104px;
+    max-height: 104px;
 }
 
 .slider img:hover {
