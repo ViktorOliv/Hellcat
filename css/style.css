@@ -139,7 +139,7 @@ a p:hover {
     margin-right: 15px;
     margin-bottom: 15px;
     max-width: 350px;
-    max-height: 425px;
+    /* max-height: 425px; */
     padding: 5px;
     border-radius: 5px;
     box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.40);

@@ -14,39 +14,50 @@ window.addEventListener ('click', function (event) {
             
         }; 
 
-        const cartItemHTML = `
-        <div class="cart-item" data-id="${productInfo.id}">
-								<div class="cart-item__top">
-									<div class="cart-item__img">
-										<img src="${productInfo.imgSrc}" alt="${productInfo.title}">
-									</div>
-									<div class="cart-item__desc">
-										<div class="cart-item__title">${productInfo.title}</div>
-										<div class="cart-item__weight">${productInfo.size}</div>
+        const itemInCart =  cartWrapper.querySelector(`[data-id= '${productInfo.id}']`);
 
-										<!-- cart-item__details -->
-										<div class="cart-item__details">
+        if (itemInCart) {
+            const counterElement = itemInCart.querySelector('[data-counter]');
+            
+            counterElement.innerText = parseInt(counterElement.innerText) + parseInt(productInfo.counter);
+            
+        } else {
 
-											<div class="items items--small counter-wrapper">
-												<div class="items__control" data-action="minus">-</div>
-												<div class="items__current" data-counter="">${productInfo.counter}</div>
-												<div class="items__control" data-action="plus">+</div>
-											</div>
+            const cartItemHTML = `
+            <div class="cart-item" data-id="${productInfo.id}">
+                                    <div class="cart-item__top">
+                                        <div class="cart-item__img">
+                                            <img src="${productInfo.imgSrc}" alt="${productInfo.title}">
+                                        </div>
+                                        <div class="cart-item__desc">
+                                            <div class="cart-item__title">${productInfo.title}</div>
+                                            <div class="cart-item__weight">${productInfo.size}</div>
+    
+                                            <!-- cart-item__details -->
+                                            <div class="cart-item__details">
+    
+                                                <div class="items items--small counter-wrapper">
+                                                    <div class="items__control" data-action="minus">-</div>
+                                                    <div class="items__current" data-counter="">${productInfo.counter}</div>
+                                                    <div class="items__control" data-action="plus">+</div>
+                                                </div>
+    
+                                                <div class="price">
+                                                    <div class="price__currency">${productInfo.prise} ₴</div>
+                                                </div>
+    
+                                            </div>
+                                            <!-- // cart-item__details -->
+    
+                                        </div>
+                                    </div>
+                                </div>
+            `;
+    
+            cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
+        }
 
-											<div class="price">
-												<div class="price__currency">${productInfo.prise} ₴</div>
-											</div>
-
-										</div>
-										<!-- // cart-item__details -->
-
-									</div>
-								</div>
-							</div>
-        `;
-
-        cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
+        card.querySelector('#quantity-product').value = '1';
 
     }
 });
-
