@@ -95,6 +95,7 @@ a p:hover {
 }
 
 .btn-order {
+    margin-top: 15px;
 	box-shadow:inset 0px 1px 0px 0px #fff6af;
 	background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
 	background-color:#ffec64;
@@ -163,7 +164,7 @@ a p:hover {
     background-color: black;
     align-items: center;
     color: rgb(192, 190, 190);
-    padding: 34px 10% 50px;
+    padding: 34px 10% 60px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -194,7 +195,7 @@ a p:hover {
 
 .card-main {
     display: flex;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 51px;
 }
 
@@ -224,6 +225,10 @@ a p:hover {
 
 .slider {
     padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: -4px;
 }
 
 .slider div{
@@ -342,7 +347,7 @@ a p:hover {
 #quantity-product {
     font-family: 'Arial';
     display: inline-block;
-    width: 10%;
+    /* width: 10%; */
     cursor: pointer;
     padding: 10px 5px;
     outline: 0;
@@ -374,4 +379,7 @@ a p:hover {
 	position:relative;
 	top:1px;
 }
+
+
+/* ADAPTIVE */
 

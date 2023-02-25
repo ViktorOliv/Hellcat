@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ГАЙКА ЗАХИСТУ РІЗЬБИ</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
@@ -32,8 +32,8 @@
 
     <main class="card-main">
 
-        <div class="product">
-            <div class="product-card">
+        <div class="product" data-id="03">
+            <div class="product-card" >
                 <div class="card-img">
                     <div class="product-img">
                         <div class="slider"> 
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                     <p class="number-product">Кількість</p>
-                    <input type="number" name="quantity-product" id="quantity-product" value="1">
+                    <input type="number" name="quantity-product" id="quantity-product" value="1" min="1" max="100">
                     <br>
                     <p><span> Ціна за штуку: </span><span>200 ₴</span></p>
                     <button class="btn-buy">КУПИТИ</button>
@@ -101,7 +101,7 @@
                             <input type="text" class="form-control" placeholder="Введіть номер телефону">
                             <input type="text" placeholder="Ваш коментар">
                         </div>
-                        <button type="submit" class="btn btn-primary">Замовити</button>
+                        <button type="submit" class="btn btn-primary btn-order">Замовити</button>
                     </form>
                 </div>
                 <!-- // Оформить заказ -->
@@ -125,7 +125,8 @@
         </div>
     </footer>
 
-    <script src="slider.js"></script>
-    <script src="script.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>
