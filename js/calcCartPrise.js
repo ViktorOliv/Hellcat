@@ -14,6 +14,5 @@ function calcCartPrise() {
 
     totalPriceEl.innerText = priceTotal;
     
-    console.log(totalPriceEl);
-
+    saveCartTolocalStorage();
 };

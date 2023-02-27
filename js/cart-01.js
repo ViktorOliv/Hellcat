@@ -63,4 +63,6 @@ window.addEventListener ('click', function (event) {
 
         calcCartPrise();
     }
+    
+    saveCartTolocalStorage();
 });

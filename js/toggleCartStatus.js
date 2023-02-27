@@ -15,4 +15,5 @@ function toggleCartStatus() {
         orderForm.style.display = "none";
     }
 
+    saveCartTolocalStorage();
 }

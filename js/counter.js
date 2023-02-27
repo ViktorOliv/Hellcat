@@ -46,4 +46,6 @@ if (event.target.dataset.action === 'plus' || event.target.dataset.action === 'm
     if (event.target.hasAttribute('data-action') && event.target.closest('.cart-wrapper') ) {
         calcCartPrise();
     }
+
+    saveCartTolocalStorage();
 });
