@@ -60,5 +60,7 @@ window.addEventListener ('click', function (event) {
         card.querySelector('#quantity-product').value = '1';
 
         toggleCartStatus();
+
+        calcCartPrise();
     }
 });
