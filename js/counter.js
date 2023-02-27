@@ -37,6 +37,8 @@ if (event.target.dataset.action === 'plus' || event.target.dataset.action === 'm
         } else if (event.target.closest('.cart-wrapper') && parseInt(counter.innerText) === 1) {
 
             event.target.closest('.cart-item').remove();
+            
+            toggleCartStatus();
         }
 
 
