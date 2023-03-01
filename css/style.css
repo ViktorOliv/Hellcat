@@ -33,6 +33,10 @@ a p:hover {
 
 }
 
+.none {
+    display: none;
+}
+
 .nav {
     display:flex;
     align-items:center;
