@@ -115,7 +115,22 @@
                     <h5 class="card-title">Оформити замовлення</h4>
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Введіть номер телефону">
+                            <!-- <input type="text" class="form-control" placeholder="Введіть номер телефону"> -->
+
+                            <div class="group">      
+                                <input type="text" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Name</label>
+                              </div>
+
+                              <div class="group">      
+                                <input type="text" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>Ваш коментар</label>
+                              </div>
+                                
                             <input type="text" placeholder="Ваш коментар">
                         </div>
                         <button type="submit" class="btn btn-primary btn-order">Замовити</button>
@@ -142,6 +157,7 @@
         </div>
     </footer>
     
+    <script src="./js/cartCounter.js"></script>
     <script src="./js/cartTolocalStorage.js"></script>
     <script src="./js/calcCartPrise.js"></script>
     <script src="./js/toggleCartStatus.js"></script>

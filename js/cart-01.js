@@ -70,6 +70,7 @@ window.addEventListener ('click', function (event) {
         toggleCartStatus();
 
         calcCartPrise();
+        countCartCounter();
     }
     
     saveCartTolocalStorage();
