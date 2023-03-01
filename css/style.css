@@ -94,6 +94,72 @@ a p:hover {
     margin-left: 15px;
 }
 
+.cart-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item {
+    margin: 5px;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.cart-item__top {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+
+}
+
+.cart-item__title,
+.cart-item__weight,
+.cart-item__details {
+    padding: 3px;
+}
+
+.cart-item__img {
+    flex: 0 1 20%;
+}
+
+.cart-item__desc { 
+    flex: 0 1 75%;
+    /* text-align: start; */
+}
+
+.cart-item__img img{
+    width: 100px;
+}
+
+.cart-item__details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.items--small { 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-family: 'Merriweather', serif;
+    background: #f2ede7;
+    margin-right: 10px;
+    border-radius: 8px;
+    /* width: 120px; */
+    display: flex;
+    font-size: 18px;
+    /* height: 30px; */
+}
+
+.items__control {
+    width: 30px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    text-align: center;
+    background: #f2ede7;
+    border-radius: 8px;
+}
+
 .btn-order {
     margin-top: 15px;
 	box-shadow:inset 0px 1px 0px 0px #fff6af;

@@ -1,87 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hellcat</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>КЛЮЧ ФІГУРНИЙ 34</title>
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/fav/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/fav/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/fav/favicon-16x16.png">
-    <link rel="manifest" href="img/fav/site.webmanifest">
-    <link rel="mask-icon" href="img/fav/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="72x72" href="./img/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/fav/favicon-16x16.png">
+    <link rel="manifest" href="./img/fav/site.webmanifest">
+    <link rel="mask-icon" href="./img/fav/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
-
     <header>
         <div class="starting-bar"><p>Працюємо для вас!</p></div>
         <nav class="nav">
-            <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo" style="max-width: 350px;"></a></div>
+            <div class="logo"><a href="index.html"><img src="./img/logo.png" alt="logo" style="max-width: 350px;"></a></div>
             <div class="nav-text"><h2>New weapon vision</h2></div>
-            <div class="cart">
-                <span>Корзина</span> <span class="cart-counter">0</span> 
-                <img src="img/cart.png" alt="cart">
-        </div>
+            <div class="cart"><span>Корзина <span class="cart-counter">0</span></span> <img src="./img/cart.png" alt="cart" style="max-width: 20px;"></div>
             
         </nav>
         <h2 class="DTC-bar">ДТК ТА ІНШІ ТОВАРИ</h2>
     </header>
 
-    <main class="main">
+    <main class="card-main">
 
-        <div class="cards">
-            <div class="card-area">
-                <div class="card"> 
-                    <a href="key_nut.html"><img src="img/cart/key_nut/1.jpg" alt=""></a>
-                        <p style="color: green;">В наявності</p>
-                    <a href="key_nut.html"><p>КЛЮЧ ГАЙКИ ПРИКЛАДУ</p></a>
+        <div class="product" data-id="05" data-src="./img/cart/key_34/key_34.jpg">
+            <div class="product-card">
+                <div class="card-img">
+                    <div class="product-img">
+                        <div class="slider"> 
+                            <div><img src="./img/cart/key_34/key_34.jpg" alt="key" data-active="true"></div>
+
+                        </div>
+                        <img class="product-big-img" src="./img/cart/key_34/key_34.jpg" alt="key">
+                    </div>
+
                 </div>
-                <div class="card"> 
-                    <a href="shaiba.html"><img src="img/cart/shaiba/shaiba1-short.jpg" alt=""></a>
-                    <p style="color: green;">В наявності</p>
-                    <a href="shaiba.html"><p>ШАЙБА ЗМИНАЄМА CRUSH WASHER</p></a>
+                <div class="card-info">
+                    <p class="card-info-Name">КЛЮЧ ФІГУРНИЙ 34</p>
+                    <p>Розмір</p>
+                    <div class="select">
+                        <select>
+                            <option value="Standart">Standart</option>
+                            <option value="asdasd" >asdasd</option>
+                        </select>
+                        <div class="select_arrow">
+                        </div>
+                    </div>
+                    <p class="number-product">Кількість</p>
+                    <input type="number" name="quantity-product" id="quantity-product"  value="1" min="1" max="1000">
+                    <br>
+                    <p class="price"> Ціна за штуку: <span class="price-number">200</span> ₴</p>
+                    <button data-cart class="btn-buy">КУПИТИ</button>
+                    <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum iusto quasi nobis sit. Iusto in assumenda ea ab autem! Distinctio tenetur aliquam eveniet iusto aperiam esse, est facilis, id quos ex libero. Maiores repellendus fuga provident quae unde. Laborum omnis perspiciatis architecto necessitatibus ea magnam quasi accusantium quo amet eaque.</p>
                 </div>
-                <div class="card"> 
-                    <a href="dtk.html"><img src="img/cart/dtk/dtk4-short.jpg" alt=""></a>
-                        <p style="color: green;">В наявності</p>
-                    <a href="dtk.html"><p>ДТК Hellcat S AR15</p></a>
-                </div>
-                <div class="card"> 
-                    <a href="kolpachok.html"><img src="img/cart/kolpachok/kolpachok2-short.jpg" alt=""></a>
-                        <p style="color: green;">В наявності</p>
-                    <a href="kolpachok.html"><p>ГАЙКА ЗАХИСТУ РІЗЬБИ</p></a>
-                </div>
-                <div class="card"> 
-                    <a href="key_34.html"><img src="./img/cart/key_34/key_34_index_html.jpg" alt=""></a>
-                        <p style="color: green;">В наявності</p>
-                    <a href="#"><p>КЛЮЧ ФІГУРНИЙ 34</p></a>
-                </div>
-                <div class="card"> 
-                    <a href="#"><img src="img/cart/dtk.jpg" alt=""></a>
-                        <p style="color: green;">В наявності</p>
-                    <a href="#"><p>КЛЮЧ ФІГУРНИЙ 34</p></a>
-                </div>
-                <div class="card"> 
-                    <a href="#"><img src="img/cart/dtk.jpg" alt=""></a>
-                        <p style="color: green;">В наявності</p>
-                    <a href="#"><p>ВТУЛКА ПЕРЕХІДНА</p></a>
-                </div>
-                <div class="card"> 
-                    <a href="#"><img src="img/cart/dtk.jpg" alt=""></a>
-                        <p style="color: green;">В наявності</p>
-                    <a href="#"><p>КЛЮЧ ФІГУРНИЙ 34</p></a>
-                </div>
-                
             </div>
         </div>
+
+        <!-- Корзина -->
 
         <div class="cart-box">
 
@@ -111,7 +95,7 @@
                 </div>
 
                 <!-- Оформить заказ -->
-                <div id="order-form" class="card-body border-top none">
+                <div id="order-form" class="card-body border-top none" style="display: none;">
                     <h5 class="card-title">Оформити замовлення</h4>
                     <form>
                         <div class="form-group">
@@ -127,7 +111,7 @@
             <!-- // Корзина -->
         </div>
 
-        </main>
+    </main>
 
     <footer class="footer">
         <div class="footer-title"><h2>Hellcat</h2></div>
@@ -141,12 +125,13 @@
         <a href="https://www.facebook.com/home.php"><img style="width: 22px;" src="img/free-icon-facebook-101094.png" alt="facebook"></a>
         </div>
     </footer>
-    
+
     <script src="./js/cartTolocalStorage.js"></script>
     <script src="./js/calcCartPrise.js"></script>
     <script src="./js/toggleCartStatus.js"></script>
     <script src="./js/counter.js"></script>
     <script src="./js/cart-01.js"></script>
     <script src="./js/slider.js"></script>
+
 </body>
 </html>
