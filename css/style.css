@@ -164,6 +164,15 @@ a p:hover {
     border-radius: 8px;
 }
 
+.total-price {
+    font-weight: bold;
+}
+
+.rouble {
+    font-size: 18px;
+    font-weight: 900;
+}
+
 .btn-order {
     margin-top: 15px;
 	box-shadow:inset 0px 1px 0px 0px #fff6af;
