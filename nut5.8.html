@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ШАЙБА ЗМИНАЄМА CRUSH WASHER</title>
+    <title>КЛЮЧ ГАЙКИ ПРИКЛАДУ</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,24 +32,27 @@
 
     <main class="card-main">
 
-        <div class="product" data-id="02" data-src="./img/cart/shaiba/shaiba1-short-slider1.jpg">
+        <div class="product" data-id="06" data-src="./img/cart/kolpachok/colpachok2-short-slider2.jpg">
             <div class="product-card">
                 <div class="card-img">
                     <div class="product-img">
                         <div class="slider"> 
-                            <div><img src="./img/cart/shaiba/shaiba1-short-slider1.jpg" alt="key" data-active="true"></div>
+                            <div><img src="./img/cart/kolpachok/colpachok2-short-slider2.jpg" alt="key" data-active="true"></div>
+                            <div><img src="./img/cart/kolpachok/colpachok1-short-slider1.jpg" alt="key" data-active="false"></div>
+                            <div><img src="./img/cart/kolpachok/colpachok3-short-slider3.jpg" alt="key" data-active="false"></div>
 
                         </div>
-                        <img class="product-big-img" src="./img/cart/shaiba/shaiba1-short-slider1.jpg" alt="key">
+                        <img class="product-big-img" src="./img/cart/kolpachok/colpachok2-short-slider2.jpg" alt="key">
                     </div>
 
                 </div>
                 <div class="card-info">
-                    <p class="card-info-Name">ШАЙБА ЗМИНАЄМА CRUSH WASHER</p>
+                    <p class="card-info-Name">ГАЙКА ЗАХИСТУ РІЗЬБИ 5/8" 28 UNEF</p>
                     <p>Розмір</p>
                     <div class="select">
                         <select>
                             <option value="Standart">Standart</option>
+                            <option value="Custom" >Custom</option>
                         </select>
                         <div class="select_arrow">
                         </div>
@@ -94,12 +96,15 @@
 
                 </div>
 
+
                 <!-- Оформить заказ -->
                 <div id="order-form" class="card-body border-top none">
                     <h5 class="card-title">Оформити замовлення</h4>
                     <div class="form-box">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Введіть номер телефону">
+                            <input type="text" class="form-control" placeholder="П.І.Б.">
+                            <input type="text" class="form-control" placeholder="Місто, віділення НП">
                         </div>
                         <button data-order class="btn btn-primary btn-order">Замовити</button>
                     </div>
@@ -112,7 +117,6 @@
 
     </main>
 
-
     <footer class="footer">
         <div class="footer-title"><h2>Hellcat</h2></div>
         <div class="footer-contacts">
@@ -121,19 +125,19 @@
         </div>
         <div class="footer-network">
             <p>Приєднуйтесь до нашої спільноти!</p>
-        <a href="https://www.youtube.com/"><img style="width: 25px;" src="./img/free-icon-youtube-1384012.jpg" alt="youtube"></a>
-        <a href="https://www.facebook.com/home.php"><img style="width: 22px;" src="./img/free-icon-facebook-101094.png" alt="facebook"></a>
+        <a href="https://www.youtube.com/"><img style="width: 25px;" src="img/free-icon-youtube-1384012.jpg" alt="youtube"></a>
+        <a href="https://www.facebook.com/home.php"><img style="width: 22px;" src="img/free-icon-facebook-101094.png" alt="facebook"></a>
         </div>
     </footer>
 
-
+    <script src="./js/changeIdOnSize.js"></script>
     <script src="./js/cartCounter.js"></script>
     <script src="./js/cartTolocalStorage.js"></script>
+    <script src="./js/sendingOrder.js"></script>
     <script src="./js/calcCartPrise.js"></script>
     <script src="./js/toggleCartStatus.js"></script>
     <script src="./js/counter.js"></script>
     <script src="./js/cart-01.js"></script>
     <script src="./js/slider.js"></script>
-
 </body>
 </html>

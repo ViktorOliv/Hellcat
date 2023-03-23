@@ -32,7 +32,7 @@
 
     <main class="card-main">
 
-        <div class="product" data-id="04" data-src="./img/cart/kolpachok/colpachok2-short-slider2.jpg">
+        <div class="product" data-id="06" data-src="./img/cart/kolpachok/colpachok2-short-slider2.jpg">
             <div class="product-card">
                 <div class="card-img">
                     <div class="product-img">
@@ -47,12 +47,12 @@
 
                 </div>
                 <div class="card-info">
-                    <p class="card-info-Name">ГАЙКА ЗАХИСТУ РІЗЬБИ</p>
+                    <p class="card-info-Name">ГАЙКА ЗАХИСТУ РІЗЬБИ 5/8" 28 UNEF</p>
                     <p>Розмір</p>
                     <div class="select">
                         <select>
                             <option value="Standart">Standart</option>
-                            <option value="asdasd" >asdasd</option>
+                            <option value="Custom" >Custom</option>
                         </select>
                         <div class="select_arrow">
                         </div>
@@ -96,12 +96,15 @@
 
                 </div>
 
+
                 <!-- Оформить заказ -->
                 <div id="order-form" class="card-body border-top none">
                     <h5 class="card-title">Оформити замовлення</h4>
                     <div class="form-box">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Введіть номер телефону">
+                            <input type="text" class="form-control" placeholder="П.І.Б.">
+                            <input type="text" class="form-control" placeholder="Місто, віділення НП">
                         </div>
                         <button data-order class="btn btn-primary btn-order">Замовити</button>
                     </div>
@@ -127,14 +130,14 @@
         </div>
     </footer>
 
-
+    <script src="./js/changeIdOnSize.js"></script>
     <script src="./js/cartCounter.js"></script>
     <script src="./js/cartTolocalStorage.js"></script>
+    <script src="./js/sendingOrder.js"></script>
     <script src="./js/calcCartPrise.js"></script>
     <script src="./js/toggleCartStatus.js"></script>
     <script src="./js/counter.js"></script>
     <script src="./js/cart-01.js"></script>
     <script src="./js/slider.js"></script>
-
 </body>
 </html>

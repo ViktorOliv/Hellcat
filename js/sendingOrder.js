@@ -19,7 +19,9 @@ sendingOrder.addEventListener ('click',  () => {
       .then(response => response.json())
       .then(data => {
         const cartWrapper = document.querySelector(".cart-wrapper");
+        const cartCounter = document.querySelector(".cart-counter");
         cartWrapper.innerHTML = "";
+        cartCounter.innerHTML = "0";
         toggleCartStatus();
         
         alert(data.message);

@@ -53,7 +53,6 @@
                     <div class="select">
                         <select>
                             <option value="Standart">Standart</option>
-                            <option value="asdasd" >asdasd</option>
                         </select>
                         <div class="select_arrow">
                         </div>
@@ -97,12 +96,15 @@
 
                 </div>
 
+
                 <!-- Оформить заказ -->
                 <div id="order-form" class="card-body border-top none">
                     <h5 class="card-title">Оформити замовлення</h4>
                     <div class="form-box">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Введіть номер телефону">
+                            <input type="text" class="form-control" placeholder="П.І.Б.">
+                            <input type="text" class="form-control" placeholder="Місто, віділення НП">
                         </div>
                         <button data-order class="btn btn-primary btn-order">Замовити</button>
                     </div>
@@ -128,9 +130,10 @@
         </div>
     </footer>
 
-
+    <script src="./js/changeIdOnSize.js"></script>
     <script src="./js/cartCounter.js"></script>
     <script src="./js/cartTolocalStorage.js"></script>
+    <script src="./js/sendingOrder.js"></script>
     <script src="./js/calcCartPrise.js"></script>
     <script src="./js/toggleCartStatus.js"></script>
     <script src="./js/counter.js"></script>

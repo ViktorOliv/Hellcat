@@ -16,9 +16,9 @@ window.addEventListener ('click', function (event) {
 
 
 
-        if (productInfo.title == "ШАЙБА ЗМИНАЄМА CRUSH WASHER") {
-            productInfo.title = "ШАЙБА ЗМИНАЄМА <br> CRUSH WASHER";
-        }
+        // if (productInfo.title == "ШАЙБА ЗМИНАЄМА CRUSH WASHER") {
+        //     productInfo.title = "ШАЙБА ЗМИНАЄМА <br> CRUSH WASHER";
+        // }
 
 
 
@@ -39,7 +39,7 @@ window.addEventListener ('click', function (event) {
                                         </div>
                                         <div class="cart-item__desc">
                                             <div class="cart-item__title">${productInfo.title}</div>
-                                            <div class="cart-item__weight"> ${productInfo.size}</div>
+                                            <div class="cart-item__weight">${productInfo.size}</div>
     
                                             <!-- cart-item__details -->
                                             <div class="cart-item__details">
