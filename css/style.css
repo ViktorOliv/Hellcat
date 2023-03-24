@@ -459,6 +459,10 @@ a p:hover {
 	top:1px;
 }
 
+.productDescription {
+    text-align: justify; 
+    text-indent: 1.5em;
+}
 
 /* ADAPTIVE */
 
