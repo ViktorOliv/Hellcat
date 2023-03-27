@@ -20,12 +20,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
   $name = $data['name'];
   $email = $data['email'];
-  $message = $data['message'];
+  $shoppingLists = $data['shoppingLists'];
+  $idData = $data['idData'];
+  $tel = $data['tel'];
+  $pib = $data['pib'];
+  $location = $data['location'];
+  $totalPrise = $data['totalPrise'];
   
   // Відправлення електронної пошти
   $to = 'example@example.com';
-  $subject = 'Нове повідомлення від ' . $name;
-  $body = "Ім'я: $name\nEmail: $email\nПовідомлення:\n$message";
+  $subject = 'Нове замовлення ' . $idData;
+  $body = "Данні замовника: \n Телефон: $tel \n П.І.Б.:$pib  \n Адреса: $location\n Замовлення:\n$shoppingLists \n Вартість замовлення:   $totalPrise грн";
   
   if (mail($to, $subject, $body)) {
     // Відповідь на успішну відправку

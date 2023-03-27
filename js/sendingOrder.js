@@ -1,12 +1,52 @@
 let sendingOrder = document.querySelector(".btn-order");
 
 
-sendingOrder.addEventListener ('click',  () => {
-    const data = {
-        name: 'John Doe',
-        email: 'johndoe@example.com',
-        message: 'Жестяк'
+sendingOrder.addEventListener ('click', sendOrder);
+
+function sendOrder() {
+
+  
+  calcCartPrise();
+  countCartCounter();
+  
+    const cartWrapper = document.querySelector('.cart-wrapper') ;
+    const cartItems = cartWrapper.querySelectorAll(".cart-item");
+    let shoppingList = '';
+  
+
+    cartItems.forEach(cartItem => {
+      
+      let itemData = {
+        itemTitle: cartItem.querySelector(".cart-item__title").innerHTML,
+        itemWeight: cartItem.querySelector(".cart-item__weight").innerHTML,
+        itemNumber: cartItem.querySelector(".items__current").innerHTML,
+        itemPrise: cartItem.querySelector(".price__currency").innerHTML,
+
+
       };
+
+      itemDataString = itemData.itemTitle + '\n Розмір: ' + itemData.itemWeight + '\n Кількість:' + itemData.itemNumber + '\n Ціна:' + itemData.itemPrise  + '\n';
+      
+      shoppingList += itemDataString;
+      
+    });
+  
+    console.log(cartWrapper);
+  
+    const data = {
+        idData: new Date (),
+        tel: document.querySelector("#tel").value,
+        pib: document.querySelector("#pib").value,
+        location: document.querySelector("#location").value,
+        shoppingLists: shoppingList,
+        totalPrise: document.querySelector(".total-price").innerHTML,
+  
+      };
+  
+  
+      // console.log(data);
+  
+  
       
       fetch('/sendmail.php', {
         method: 'POST',
@@ -15,7 +55,7 @@ sendingOrder.addEventListener ('click',  () => {
         },
         body: JSON.stringify(data)
       })
-
+  
       .then(response => response.json())
       .then(data => {
         const cartWrapper = document.querySelector(".cart-wrapper");
@@ -27,7 +67,9 @@ sendingOrder.addEventListener ('click',  () => {
         alert(data.message);
       } )
       .catch(error => console.error(error));
-});
+
+};
+
 
 
 

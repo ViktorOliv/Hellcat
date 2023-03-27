@@ -11,8 +11,6 @@ window.addEventListener ('click', function (event) {
             if (card.dataset.id  == cartItemId.dataset.id && productSize.value !== cartItemId.querySelector(".cart-item__weight").textContent) {
                 card.dataset.id += `.${productSize.selectedIndex}`;
 
-                console.log(card.dataset.id);
-                console.log(cartItemId.querySelector(".cart-item__weight").textContent);
             };
             if (card.dataset.id  !== cartItemId.dataset.id && productSize.value == cartItemId.querySelector(".cart-item__weight").textContent && card.querySelector(".card-info-Name").textContent == cartItemId.querySelector(".cart-item__title").textContent ) {
                 card.dataset.id  = cartItemId.dataset.id;
