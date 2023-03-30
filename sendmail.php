@@ -28,8 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $totalPrise = $data['totalPrise'];
   
   // Відправлення електронної пошти
-  $to = 'example@example.com';
-  $subject = 'Нове замовлення ' . $idData;
+  $to = 'biturba@gmail.com';
+  $subject = "$idData Нове замовлення для: $tel";
   $body = "Данні замовника: \n Телефон: $tel \n П.І.Б.:$pib  \n Адреса: $location\n Замовлення:\n$shoppingLists \n Вартість замовлення:   $totalPrise грн";
   
   if (mail($to, $subject, $body)) {

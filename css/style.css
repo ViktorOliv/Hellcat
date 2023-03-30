@@ -48,6 +48,7 @@ a p:hover {
 
 .logo {
     flex: 0 1 33.333%;
+    max-width: 350px;
 }
 
 .nav-text {
@@ -329,7 +330,7 @@ a p:hover {
     transition: 0.3s;
 }
 
-.product-big-img {
+.product-big-img {  
     /* max-width: 560px; */
     max-height: 430px;
 }
@@ -485,3 +486,155 @@ a p:hover {
     border-radius: 0.25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+/* ////////////////////////// */
+/* @media */
+/* ///////////////////////// */
+
+@media (max-width: 1439px) {
+    .product-big-img {
+
+    }
+    .product-card {
+        flex-direction: column;
+    }
+
+    .card-area  {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1199px) {
+
+    .card-main {
+        justify-content: center;
+    }
+
+    .product {
+        max-width: 660px;
+    }
+
+    .product-big-img {
+        max-height: 380px;
+    }
+
+    .slider img {
+        max-width: 96px;
+        max-height: 96px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1023px) {
+
+    .product {
+        max-width: 400px;
+    }
+
+    .product-big-img {
+        max-height: 225px;
+    }
+
+    .slider img {
+        max-width: 55px;
+        max-height: 55px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .cart-box {
+        display: none;
+    }
+
+    .cards {
+        flex: 0 1 100%;
+    }
+
+    .product {
+        max-width: 400px;
+    }
+
+    .product-big-img {
+        max-height: 225px;
+    }
+
+    .slider img {
+        max-width: 55px;
+        max-height: 55px;
+    }
+}
+
+@media (max-width: 599px) {
+
+    .cart span:first-child {
+        display: none;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        order:1;
+        /* flex: 0 1 49%; */
+    }
+
+    .cart {
+        order:2;
+        /* flex: 0 1 49%; */
+    }
+
+    .nav-text {
+        order:3;
+        flex: 0 1 100%;
+        font-size: 22px;
+
+    }
+}
+
+@media (max-width: 424px) {
+    
+    .logo img{
+        max-width: 235px;
+    }
+
+    .product-big-img {
+        max-height: 200px;
+    }
+
+    .slider img {
+        max-width: 48px;
+        max-height: 48px;
+    }
+}
+
+@media (max-width: 374px) {
+    
+    .logo img{
+        max-width: 200px;
+    }
+
+    .card {
+        max-width: 280px;
+    }
+
+    .card img {
+        max-width: 275px;
+
+    }
+}
+
+@media (max-width: 321px) {
+    
+
+    .product-big-img {
+        max-height: 165px;
+    }
+
+    .slider img {
+        max-width: 38px;
+        max-height: 38px;
+    }
+}
+
+

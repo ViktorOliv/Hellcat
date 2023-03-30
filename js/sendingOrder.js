@@ -22,7 +22,6 @@ function sendOrder() {
         itemNumber: cartItem.querySelector(".items__current").innerHTML,
         itemPrise: cartItem.querySelector(".price__currency").innerHTML,
 
-
       };
 
       itemDataString = itemData.itemTitle + '\n Розмір: ' + itemData.itemWeight + '\n Кількість:' + itemData.itemNumber + '\n Ціна:' + itemData.itemPrise  + '\n';
