@@ -542,8 +542,83 @@ a p:hover {
 
 @media (max-width: 767px) {
 
+/* ////////////////////// */
+    /* close cart */
+/* ////////////////////// */
+
+.close-cart-box {
+    margin-top: -10px;
+    padding-left: 315px;
+    position: absolute;
+    /* right: 25px; */
+}
+
+.closeCart {
+	position: absolute;
+	/* top: 30px; */
+	/* right: 20px; */
+	width: 24px;
+	height: 24px;
+	opacity: 1;
+	cursor: pointer;
+    transition: opacity ease 0.5s;
+
+}
+
+.closeCart::before,
+.closeCart::after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	display: block;
+	width: 24px;
+	height: 2px;
+	background: #000;
+}
+
+.closeCart::before {
+	transform: rotate(45deg);
+}
+
+.closeCart::after {
+	transform: rotate(-45deg);
+}
+
+
+/* ////////////////////// */
+    /* close cart */
+/* ////////////////////// */
+
+    body._lock {
+        overflow: hidden;
+    }
+
     .cart-box {
-        display: none;
+        transform: translate( 0px, -100%);
+        /* display: none; */
+        overflow: auto;
+        position: fixed;    
+        margin: 0px;
+        top: -100%;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100vw;
+        height: 100vh;
+        transition: all 0.3s ease 0s ;
+    }
+
+    
+    .cart-box._active {
+        top: 0px;
+        transform: translate( 0px, 0px);
+
+    }
+    
+
+    .cart-box .card {
+        margin: auto;
+        margin-bottom: 30px;
+        background-color: rgb(255, 255, 255);
     }
 
     .cards {
@@ -610,6 +685,13 @@ a p:hover {
 
 @media (max-width: 374px) {
     
+    .close-cart-box {
+        margin-top: -10px;
+        padding-left: 247px;
+        position: absolute;
+
+    }
+
     .logo img{
         max-width: 200px;
     }
@@ -621,6 +703,10 @@ a p:hover {
     .card img {
         max-width: 275px;
 
+    }
+
+    .form-control {
+        max-width: 245px;
     }
 }
 
