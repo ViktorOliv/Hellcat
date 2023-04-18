@@ -24,13 +24,13 @@ function sendOrder() {
 
       };
 
-      itemDataString = itemData.itemTitle + '\n Розмір: ' + itemData.itemWeight + '\n Кількість:' + itemData.itemNumber + '\n Ціна:' + itemData.itemPrise  + '\n';
+      itemDataString ='<p>'+ itemData.itemTitle + '<\p> Розмір: ' + itemData.itemWeight + '<\p> Кількість:' + itemData.itemNumber + '<\p> Ціна:' + itemData.itemPrise  + '<\p>';
       
       shoppingList += itemDataString;
       
     });
   
-    console.log(cartWrapper);
+    // console.log(cartWrapper);
   
     const data = {
         idData: new Date (),
@@ -44,37 +44,74 @@ function sendOrder() {
   
   
       // console.log(data);
-  
-  
+
+
+//////////////////////////////////
+// код заглушка не працює відповідь від сервера
+//////////////////////////////////
+
       
-      fetch('/sendmail.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
+let response = fetch('./sendmail.php', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+});
+
+if (response.ok) {
+let result = response.json();
+alert(result.message);
+alert("OK!");
+} else {
+          const cartWrapper = document.querySelector(".cart-wrapper");
+  const cartCounter = document.querySelector(".cart-counter");
+  cartWrapper.innerHTML = "";
+  cartCounter.innerHTML = "0";
+  toggleCartStatus();
   
-      .then(response => response.json())
-      .then(data => {
-        const cartWrapper = document.querySelector(".cart-wrapper");
-        const cartCounter = document.querySelector(".cart-counter");
-        cartWrapper.innerHTML = "";
-        cartCounter.innerHTML = "0";
-        toggleCartStatus();
-        
-        alert(data.message);
-      } )
-      .catch(error => console.error(error));
+alert("Дякуємо за ваше замовлення!");
 
 };
+};
+
+//////////////////////////////////
+// код заглушка
+//////////////////////////////////
+
+//////////////////////////////////
+      // Старий код
+//////////////////////////////////
+//       fetch('/sendmail.php', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(data)
+//       })
+  
+//       .then(response => response.json())
+//       .then(data => {
+//         const cartWrapper = document.querySelector(".cart-wrapper");
+//         const cartCounter = document.querySelector(".cart-counter");
+//         cartWrapper.innerHTML = "";
+//         cartCounter.innerHTML = "0";
+//         toggleCartStatus();
+        
+//         alert(data.message);
+//       } )
+//       .catch(error => console.error(error));
+
+// };
+
+//////////////////////////////////
+      // Старий код
+//////////////////////////////////
 
 
+// // window.addEventListener('click', function (event) {
+//   function sendOrder()  {
 
-
-// window.addEventListener('click', function (event) {
-
-// if (event.target.hasAttribute ('data-order')) {
 
 //   const data = {
 //   tel: '+33644628065',
@@ -82,7 +119,7 @@ function sendOrder() {
   
 // };
 
-// async function orderSend (e) {
+// async function orderSends () {
   
 
 //   let response = await fetch('/sendmail.php', {
@@ -99,7 +136,8 @@ function sendOrder() {
     
 // };
 
-// orderSend ();
+// orderSends ();
 
 // };
-// });
+
+
