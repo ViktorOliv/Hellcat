@@ -492,9 +492,7 @@ a p:hover {
 /* ///////////////////////// */
 
 @media (max-width: 1439px) {
-    .product-big-img {
 
-    }
     .product-card {
         flex-direction: column;
     }
