@@ -14,4 +14,4 @@ function getCartTolocalStorage() {
         document.querySelector(".cart-counter").innerHTML = localStorage.getItem("cartCounter");
     }
     
-}
+};
