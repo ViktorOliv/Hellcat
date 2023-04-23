@@ -39,48 +39,44 @@ function sendOrder() {
         location: document.querySelector("#location").value,
         shoppingLists: shoppingList,
         totalPrise: document.querySelector(".total-price").innerHTML,
+        message: "Hello, world!",
   
       };
   
   
       // console.log(data);
 
+const url = "./sendmail.php";
 
-//////////////////////////////////
-// код заглушка не працює відповідь від сервера
-//////////////////////////////////
+// Налаштування запиту
+const options = {
+  method: "POST",
+  body: JSON.stringify(data),
+  headers: { "Content-Type": "application/json" },
+};
 
-      
-let response = fetch('./sendmail.php', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify(data)
-});
-
-if (response.ok) {
-let result = response.json();
-alert(result.message);
-alert("OK!");
-} else {
-          const cartWrapper = document.querySelector(".cart-wrapper");
-  const cartCounter = document.querySelector(".cart-counter");
-  cartWrapper.innerHTML = "";
-  cartCounter.innerHTML = "0";
-  toggleCartStatus();
+// Виконання запиту
+fetch(url, options)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data); // Обробка відповіді від сервера
+    
+        const cartWrapper = document.querySelector(".cart-wrapper");
+        const cartCounter = document.querySelector(".cart-counter");
+        cartWrapper.innerHTML = "";
+        cartCounter.innerHTML = "0";
+        toggleCartStatus();
+        
+        alert(data.message);
+    
+  })
+  .catch(error => console.error(error));
   
-alert("Дякуємо за ваше замовлення!");
+    };
 
-};
-};
 
 //////////////////////////////////
-// код заглушка
-//////////////////////////////////
-
-//////////////////////////////////
-      // Старий код
+      // Старий код mail()
 //////////////////////////////////
 //       fetch('/sendmail.php', {
 //         method: 'POST',
@@ -105,39 +101,6 @@ alert("Дякуємо за ваше замовлення!");
 // };
 
 //////////////////////////////////
-      // Старий код
+      // Старий код mail()
 //////////////////////////////////
-
-
-// // window.addEventListener('click', function (event) {
-//   function sendOrder()  {
-
-
-//   const data = {
-//   tel: '+33644628065',
-//   message: 'Hello World!',
-  
-// };
-
-// async function orderSends () {
-  
-
-//   let response = await fetch('/sendmail.php', {
-//             method: 'POST',
-//             body: data
-//           });
-//           if (response.ok) {
-//             let result = await response.json();
-//             alert(result.message);
-//             alert("OK!");
-//           } else {
-//             alert("ERROR");
-//           }
-    
-// };
-
-// orderSends ();
-
-// };
-
 
