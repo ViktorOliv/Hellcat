@@ -30,7 +30,7 @@ function sliderImgNumber() {
     });
 
     if (imgNumber > 1 && imgNumber < 4) {
-        console.log(imgNumber);
+        // console.log(imgNumber);
         sliderImg.style.justifyContent = "start";
     }
 } 

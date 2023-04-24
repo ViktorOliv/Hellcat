@@ -8,6 +8,10 @@ function sendOrder() {
   
   calcCartPrise();
   countCartCounter();
+
+  if (!formValidate() == 0) {
+    return;
+  }
   
     const cartWrapper = document.querySelector('.cart-wrapper') ;
     const cartItems = cartWrapper.querySelectorAll(".cart-item");
