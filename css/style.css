@@ -597,6 +597,11 @@ a p:hover {
     /* close cart */
 /* ////////////////////// */
 
+    .cart img {
+        top: 10px;
+        max-width: 30px;
+    }
+
     body._lock {
         overflow: hidden;
     }
