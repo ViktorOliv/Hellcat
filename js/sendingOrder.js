@@ -11,12 +11,38 @@ function sendOrder() {
 
   if (!formValidate() == 0) {
     return;
-  }
+  } else {
+    let cartBox = document.querySelector('.cart-box .card');
+    let cardBody = cartBox.querySelector('.card-body');
+    let cartOrderForm = cartBox.querySelector('#order-form');
+    cardBody.style.display = "none";
+    cartOrderForm.style.display = "none";
+
+    let div = document.createElement("div");
+    div.style.paddingTop = '17vh';
+    div.style.height = '20vh';
+    div.id ='sending';
+    let img = document.createElement('img');
+    img.src = 'img/sending.svg';
+
+    div.append(img);
+    cartBox.append(div);
+  };
   
     const cartWrapper = document.querySelector('.cart-wrapper') ;
     const cartItems = cartWrapper.querySelectorAll(".cart-item");
     let shoppingList = '';
-  
+
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const hour = String(currentDate.getHours()).padStart(2, '0');
+    const minute = String(currentDate.getMinutes()).padStart(2, '0');
+    const second = String(currentDate.getSeconds()).padStart(2, '0');
+    const formattedDate = `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+
+    
 
     cartItems.forEach(cartItem => {
       
@@ -37,7 +63,7 @@ function sendOrder() {
     // console.log(cartWrapper);
   
     const data = {
-        idData: new Date (),
+        idData: formattedDate,
         tel: document.querySelector("#tel").value,
         pib: document.querySelector("#pib").value,
         location: document.querySelector("#location").value,
@@ -69,6 +95,12 @@ fetch(url, options)
         const cartCounter = document.querySelector(".cart-counter");
         cartWrapper.innerHTML = "";
         cartCounter.innerHTML = "0";
+        
+        document.querySelector('.card-body').style.display = "block";
+        document.querySelector('#order-form').style.display = "block";
+        
+        document.querySelector('#sending').remove();
+console.log(document.querySelector('#sending'));
         toggleCartStatus();
         
         alert(data.message);
