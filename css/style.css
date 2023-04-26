@@ -55,7 +55,7 @@ a p:hover {
     font-family: 'Montserrat', sans-serif;
     font-size: 18px;
     flex: 0 1 33.333%;
-
+    margin-left: 285px;
 }
 
 .cart {
@@ -502,6 +502,9 @@ a p:hover {
 /* ///////////////////////// */
 
 @media (max-width: 1439px) {
+    .nav-text {
+        margin-left: 0px;
+    }
 
     .product-card {
         flex-direction: column;
